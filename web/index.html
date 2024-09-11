@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe with Powers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="menuScreen">
+    <h1>Select Game Mode</h1>
+    <button id="classicMode">Classic (2 Players)</button>
+    <button id="aiEasyMode">AI Easy Mode</button>
+    <button id="aiHardMode">AI Hard Mode</button>
+    <button id="powerMode">4x4 Power Mode</button>
+  </div>
+
+  <div class="container" id="gameScreen" style="display: none;">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="game-board" id="gameBoard"></div>
+    <p class="status-message" id="statusMessage"></p>
+    
+    <!-- Power Buttons (Visible in Power Mode) -->
+    <div id="powerButtons" style="display: none;">
+      <button id="skipTurnButton">Skip Opponent's Turn</button>
+      <button id="topOverButton">Top Over</button>
+      <button id="undoButton">Undo Last Move</button>
+    </div>
+  </div>
+
+  <!-- Overlay for end game screen -->
+  <div class="overlay" id="endScreen" style="display: none;">
+    <div class="end-message" id="endMessage"></div>
+    <button id="newGameButton">Start New Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
