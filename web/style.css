@@ -1,0 +1,518 @@
+/* Importing Google fonts for use */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Heading Style (for main title and menu) */
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling (Game Mode Buttons and New Game Button) */
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Status Message (Player's Turn) */
+.status-message {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* End Screen Styling */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.end-message {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#newGameButton {
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 30px;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#newGameButton:hover {
+  background-color: #e53935;
+}
+
+/* Game Board Styling */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cell.x {
+  color: #f44336;
+}
+
+.cell.o {
+  color: #2196f3;
+}
+
+.cell:hover {
+  background-color: #f1f1f1;
+}
+
+/* Game Board Styling */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.game-board.power-mode {
+  grid-template-columns: repeat(4, 80px); /* Adjusting for 4x4 grid */
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cell.power-mode {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem; /* Adjusting for smaller 4x4 cells */
+}
+
+/* General Button Styles */
+button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  outline: none;
+  margin: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Power Mode Button Styles */
+#powerMode {
+  background: linear-gradient(135deg, #ff7a00, #ff007f);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+#powerMode:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #ff9e00, #ff33a1);
+  box-shadow: 0 8px 20px rgba(255, 106, 0, 0.9);
+}
+
+#powerMode:active {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ff5500, #ff006f);
+  box-shadow: 0 6px 18px rgba(255, 106, 0, 1);
+}
+
+/* Power Button Styles */
+#skipTurnButton, #doubleTurnButton, #undoButton {
+  background: linear-gradient(135deg, #9b47f6, #e07bf1);
+  box-shadow: 0 4px 15px rgba(123, 66, 246, 0.6);
+  border-radius: 24px;
+  padding: 20px 30px;
+  font-size: 22px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+#skipTurnButton:hover, #doubleTurnButton:hover, #undoButton:hover {
+  transform: scale(1.25);
+  background: linear-gradient(135deg, #b261f6, #ff99f3);
+  box-shadow: 0 10px 25px rgba(123, 66, 246, 0.9);
+}
+
+#skipTurnButton:active, #doubleTurnButton:active, #undoButton:active {
+  transform: scale(1.15);
+  background: linear-gradient(135deg, #7a3ff6, #d358e6);
+  box-shadow: 0 8px 20px rgba(123, 66, 246, 1);
+}
+
+/* Button Press Animation */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pulse Effect for Idle Buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+button:active {
+  animation: buttonPress 0.2s ease;
+}
+
+/* End Screen Button */
+#newGameButton {
+  background: linear-gradient(135deg, #00d6ff, #007bff);
+  box-shadow: 0 4px 15px rgba(0, 214, 255, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+#newGameButton:hover {
+  transform: scale(1.2);
+  background: linear-gradient(135deg, #00e6ff, #0099ff);
+  box-shadow: 0 8px 20px rgba(0, 214, 255, 0.9);
+}
+
+#newGameButton:active {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #00b6ff, #0066ff);
+  box-shadow: 0 6px 18px rgba(0, 214, 255, 1);
+}
+
+/* General Button Styles */
+button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  outline: none;
+  margin: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Explosion Animation */
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes particleExplosion {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  animation: particleExplosion 0.6s ease-out forwards;
+}
+
+#powerMode, #skipTurnButton, #doubleTurnButton, #undoButton {
+  background: linear-gradient(135deg, #ff6b00, #ff0080);
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+#powerMode:active, #skipTurnButton:active, #doubleTurnButton:active, #undoButton:active {
+  animation: explode 0.4s ease forwards;
+}
+
+#powerMode:hover, #skipTurnButton:hover, #doubleTurnButton:hover, #undoButton:hover {
+  background: linear-gradient(135deg, #ff9f00, #ff33a1);
+}
+
+button:active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 80%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: flash 0.3s ease-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Adding particles on button click */
+button:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, transparent 40%, rgba(255,255,255,0.5) 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+button:active .particles {
+  --x: calc(100 * (random() - 0.5));
+  --y: calc(100 * (random() - 0.5));
+  animation: particleExplosion 0.6s ease-out forwards;
+}
+
+/* Particle creation */
+function createParticles(button) {
+  for (let i = 0; i < 15; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particles');
+    particle.style.setProperty('--x', (Math.random() - 0.5) * 200);
+    particle.style.setProperty('--y', (Math.random() - 0.5) * 200);
+    button.appendChild(particle);
+    setTimeout(() => {
+      particle.remove();
+    }, 600);
+  }
+}
+/* General Button Styles */
+button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+  outline: none;
+  margin: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced Explosion Animation */
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.6);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 18px 40px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes particleExplosion {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--x) * 2px), calc(var(--y) * 2px)) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff66a5, #ff3365);
+  animation: particleExplosion 0.8s ease-out forwards;
+}
+
+/* Button Explosion Animation */
+#powerMode, #skipTurnButton, #doubleTurnButton, #undoButton {
+  background: linear-gradient(135deg, #ff6b00, #ff0080);
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+#powerMode:active, #skipTurnButton:active, #doubleTurnButton:active, #undoButton:active {
+  animation: explode 0.6s ease forwards;
+}
+
+#powerMode:hover, #skipTurnButton:hover, #doubleTurnButton:hover, #undoButton:hover {
+  background: linear-gradient(135deg, #ff9f00, #ff33a1);
+}
+
+/* Button Flash on Press */
+button:active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(255,0,0,0.6) 30%, rgba(255,0,0,0) 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: flash 0.5s ease-out;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Bigger Particle Effect */
+button:active .particles {
+  --x: calc(100 * (random() - 0.5));
+  --y: calc(100 * (random() - 0.5));
+  animation: particleExplosion 0.8s ease-out forwards;
+}
+
+/* Creating the particle explosion */
+function createParticles(button) {
+  for (let i = 0; i < 30; i++) {  /* Increased number of particles */
+    const particle = document.createElement('div');
+    particle.classList.add('particles');
+    
+    /* Assign a random color to each particle */
+    const colors = ['#ff66a5', '#ffcc00', '#66ff66', '#33ccff', '#ff6666', '#ff99ff'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
+    particle.style.background = randomColor;
+    particle.style.setProperty('--x', (Math.random() - 0.5) * 200);
+    particle.style.setProperty('--y', (Math.random() - 0.5) * 200);
+    button.appendChild(particle);
+    setTimeout(() => {
+      particle.remove();
+    }, 800);  /* Adjust to match particleExplosion duration */
+  }
+}
+
+/* Highlight the cell that has been taken over by Top Over */
+.cell.taken-over {
+  background: linear-gradient(135deg, #ffcc00, #ff3366);
+  color: #fff;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Disabled button style */
+button:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
