@@ -11,7 +11,9 @@ Originally I'm planning to make a real app but before I take that big step I wan
 
 As Web Development isn't what I normally do, I still wanted to try it out at least, compared to trying to make a space invaders game I saw Tic-Tac-Toe is more simple
 
-When doing a little research I found 3 websites. [CodePen](https://codepen.io) which has a window for HTML, CSS and Javascript, with a live preview of the outcome all in one tab, uploaded my code from VS Code and made everything easier
+When doing a little research I found 3 websites
+
+[CodePen](https://codepen.io) which has a window for HTML, CSS and Javascript, with a live preview of the outcome all in one tab, uploaded my code from VS Code and made everything easier
 ![Screenshot from 2024-09-11 01-10-28](https://github.com/user-attachments/assets/af7f17af-3280-4551-9dd9-73462c764fab)
 
 
