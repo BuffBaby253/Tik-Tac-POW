@@ -1,4 +1,4 @@
-![Tic Tac Toe](https://github.com/user-attachments/assets/7de5e475-cce6-4fe3-975d-e6bb2cbf811f)
+![Tic Tac Toe](https://github.com/user-attachments/assets/98771872-8dad-4c0e-adf9-307c8b8a8fe4)
 > Tik-Tac-POW
 # Tic-Tac-Toe With Powers!
 ## [Try It Here](https://tiktacpow.tiiny.site)
