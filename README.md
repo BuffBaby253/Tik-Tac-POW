@@ -47,6 +47,11 @@ Each player gets **one use** of each ability per game:
 
 ---
 
+## TODO's
+- [x] Update UI & Features
+- [ ] Host Updated Version
+- [ ] Add Music
+
 ## License
 
 MIT — free to use, modify, and distribute.
