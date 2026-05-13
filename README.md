@@ -1,30 +1,52 @@
 ![Tic Tac Toe](https://github.com/user-attachments/assets/98771872-8dad-4c0e-adf9-307c8b8a8fe4)
-> Tik-Tac-POW
-# Tic-Tac-Toe With Powers!
-## [Try It Here](https://tiktacpow.tiiny.site)
-![Screenshot from 2024-09-11 01-11-44](https://github.com/user-attachments/assets/b1b711d1-3f2c-4108-91ba-8ed17fc838c2)
+# TIC·TAC·POWERS ⚡
+
+A fast, arcade-styled twist on the classic Tic-Tac-Toe 
+
+---
+
+## Modes
+
+| Mode | Description |
+|---|---|
+| 🎮 Classic 2P | Standard 3×3 Tic-Tac-Toe for two local players |
+| 🤖 AI Easy | Play against a randomized AI opponent |
+| 💀 AI Hard | Play against a strategic AI that blocks and attacks |
+| ⚡ Power Mode | 4×4 board with special powers per player |
+
+---
+
+## Power Mode Abilities
+
+Each player gets **one use** of each ability per game:
+
+- **⏭ Skip** — After placing your mark, your opponent's next turn is skipped
+- **🎯 Top Over** — Seize one of your opponent's already-placed cells (counts as your turn)
+- **↩ Undo** — Remove the last move placed and revert to the previous turn
+
+---
+
+## Features
+
+- Fully self-contained — single `.html` file, no build step required
+- Neon dark arcade UI with CRT scanlines and animated grid background
+- Particle burst effects on every move and power activation
+- Win detection with animated highlight on the winning combination
+- Responsive player cards that pulse to indicate the active turn
+- ESC key cancels Top Over mode safely (power is refunded)
+
+---
 
 
-## This is a project I did to practice my HTML, CSS & Javascript
+## Built With
 
-Originally I'm planning to make a real app but before I take that big step I wanted to play with HTML and CSS first
+- HTML5
+- CSS3 — custom properties, keyframe animations, CSS filters
+- Vanilla JavaScript — no libraries or frameworks
+- [Orbitron](https://fonts.google.com/specimen/Orbitron) & [Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono) via Google Fonts
 
-As Web Development isn't what I normally do, I still wanted to try it out at least, compared to trying to make a space invaders game I saw Tic-Tac-Toe is more simple
+---
 
-When doing a little research I found 3 websites that made life easier
+## License
 
-[CodePen](https://codepen.io) which has a window for HTML, CSS and Javascript, with a live preview of the outcome all in one tab, uploaded my code from VS Code and made everything easier
-![Screenshot from 2024-09-11 01-10-28](https://github.com/user-attachments/assets/af7f17af-3280-4551-9dd9-73462c764fab)
-
-
-[Tiiny Host](https://tiiny.host) Allowing you to upload a small project, it's now up on the internet for free
-![Screenshot from 2024-09-10 23-59-07](https://github.com/user-attachments/assets/184f44f0-104e-4240-aeb8-4478d6f2c6b6)
-
-
-[WEBINTOAPP](https://www.webintoapp.com) Turning a website into a mobile app. Although the free version is only for Android apps
-![Screenshot from 2024-09-11 01-12-22](https://github.com/user-attachments/assets/ab11ddff-63c0-473b-8f11-1af5b178634a)
-![Screenshot_20240911-003516_Package installer](https://github.com/user-attachments/assets/4bc6ead6-9dc1-4757-9b80-f1e8493b01fa)
-![Screenshot_20240911-003902_Tik-Tac-POW](https://github.com/user-attachments/assets/c12d746e-0285-49c8-81f7-c5333e9ee75a)
-
-
-Sadly to publish the app on the Google Play Store there is a one time fee of $25 so I'll wait until I publish my real app first
+MIT — free to use, modify, and distribute.
