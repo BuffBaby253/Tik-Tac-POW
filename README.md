@@ -51,6 +51,7 @@ Each player gets **one use** of each ability per game:
 - [x] Update UI & Features
 - [ ] Host Updated Version
 - [ ] Add Music
+- [ ] Add New Features
 
 ## License
 
