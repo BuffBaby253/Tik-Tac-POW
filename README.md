@@ -49,7 +49,7 @@ Each player gets **one use** of each ability per game:
 
 ## TODO's
 - [x] Update UI & Features
-- [ ] Host Updated Version
+- [x] Host Updated Version
 - [ ] Add Music
 - [ ] Add New Features
 
